@@ -16,6 +16,8 @@ install(
   PROGRAMS
   scripts/mara_control.py
   scripts/spawn_mara.py
+  scripts/spawn_phantomx.py
+  scripts/spawn_phantomx_arg.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
