@@ -1547,14 +1547,13 @@
       </surface>
     </collision>
     <sensor name='tibia_lf_contact' type='contact'>
-       <plugin name="tibia_lf_plugin" filename="libgazebo_ros_bumper.so">
+       <plugin name="tibia_lf_contact_plugin" filename="libgazebo_ros_bumper.so">
           <argument>bumper_states:=tibia_lf_collision</argument>
           <frame_name>world</frame_name>
        </plugin>
           <contact>
             <collision>tibia_lf_collision</collision>
           </contact>
-	<update_rate> 25 </update_rate>
     </sensor>
   </gazebo>
   <gazebo reference="tibia_lm">
@@ -1575,7 +1574,6 @@
           <contact>
             <collision>tibia_lm_collision</collision>
           </contact>
-	<update_rate> 25 </update_rate>
     </sensor>
   </gazebo>
   <gazebo reference="tibia_lr">
@@ -1596,7 +1594,6 @@
           <contact>
             <collision>tibia_lr_collision</collision>
           </contact>
-	<update_rate> 25 </update_rate>
     </sensor>
   </gazebo>
     <gazebo reference="tibia_rf">
@@ -1617,7 +1614,6 @@
           <contact>
             <collision>tibia_rf_collision</collision>
           </contact>
-	<update_rate> 25 </update_rate>
     </sensor>
   </gazebo>
   <gazebo reference="tibia_rm">
@@ -1638,7 +1634,6 @@
           <contact>
             <collision>tibia_rm_collision</collision>
           </contact>
-	<update_rate> 25 </update_rate>
     </sensor>
   </gazebo>
   <gazebo reference="tibia_rr">
@@ -1659,10 +1654,9 @@
           <contact>
             <collision>tibia_rr_collision</collision>
           </contact>
-	<update_rate> 25 </update_rate>
     </sensor>
   </gazebo>
-  <gazebo reference="base_link">
+  <!--gazebo reference="base_link">
     <sensor name='body_contact' type='contact'>
        <plugin name="body_contact_plugin" filename="libgazebo_ros_bumper.so">
           <argument>bumper_states:=body_collision</argument>
@@ -1671,8 +1665,8 @@
           <contact>
             <collision>base_link_fixed_joint_lump__MP_BODY_collision</collision>
           </contact>
-	<update_rate> 25 </update_rate>
+	<update_rate> 1 </update_rate>
     </sensor>
-  </gazebo>
+  </gazebo-->
 
 </robot>
